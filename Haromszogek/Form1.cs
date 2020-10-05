@@ -12,9 +12,9 @@ namespace Haromszogek
 {
     public partial class frmFo : Form
     {
-        private int aOldal;
-        private int bOldal;
-        private int cOldal;
+        private double aOldal;
+        private double bOldal;
+        private double cOldal;
 
 
 
@@ -39,9 +39,9 @@ namespace Haromszogek
 
         private void btnSzamol_Click(object sender, EventArgs e)
         {
-            aOldal = Convert.ToInt32(tbAoldal.Text);
-            bOldal = Convert.ToInt32(tbBoldal.Text);
-            cOldal = Convert.ToInt32(tbColdal.Text);
+            aOldal = Convert.ToDouble(tbAoldal.Text);
+            bOldal = Convert.ToDouble(tbBoldal.Text);
+            cOldal = Convert.ToDouble(tbColdal.Text);
 
 
 
@@ -52,7 +52,7 @@ namespace Haromszogek
             }
             else
             {
-                var h = new Haromszog(aOldal, bOldal, cOldal);
+                var h = new Haromszog(Convert.ToDouble(aOldal), Convert.ToDouble(bOldal), Convert.ToDouble(cOldal));
                 List<string> adatok = h.AdatokSzoveg();
                 foreach (var a in adatok)
                 {

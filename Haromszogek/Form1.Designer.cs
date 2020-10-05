@@ -142,7 +142,7 @@
             this.lbHarmszogLista.ItemHeight = 24;
             this.lbHarmszogLista.Location = new System.Drawing.Point(425, 49);
             this.lbHarmszogLista.Name = "lbHarmszogLista";
-            this.lbHarmszogLista.Size = new System.Drawing.Size(201, 268);
+            this.lbHarmszogLista.Size = new System.Drawing.Size(216, 268);
             this.lbHarmszogLista.TabIndex = 10;
             // 
             // btnTorol
