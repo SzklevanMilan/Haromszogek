@@ -39,25 +39,34 @@ namespace Haromszogek
 
         private void btnSzamol_Click(object sender, EventArgs e)
         {
-            aOldal = Convert.ToDouble(tbAoldal.Text);
-            bOldal = Convert.ToDouble(tbBoldal.Text);
-            cOldal = Convert.ToDouble(tbColdal.Text);
-
-
-
-
-            if (aOldal == 0 || bOldal == 0 || cOldal == 0)
+            try
             {
-                MessageBox.Show("Nem lehet 0.","Hiba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                var h = new Haromszog(Convert.ToDouble(aOldal), Convert.ToDouble(bOldal), Convert.ToDouble(cOldal));
-                List<string> adatok = h.AdatokSzoveg();
-                foreach (var a in adatok)
+                aOldal = Convert.ToDouble(tbAoldal.Text);
+                bOldal = Convert.ToDouble(tbBoldal.Text);
+                cOldal = Convert.ToDouble(tbColdal.Text);
+
+
+
+
+                if (aOldal == 0 || bOldal == 0 || cOldal == 0)
                 {
-                    lbHarmszogLista.Items.Add(a);
+                    MessageBox.Show("Nem lehet 0.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else
+                {
+                    var h = new Haromszog(Convert.ToDouble(aOldal), Convert.ToDouble(bOldal), Convert.ToDouble(cOldal));
+                    List<string> adatok = h.AdatokSzoveg();
+                    foreach (var a in adatok)
+                    {
+                        lbHarmszogLista.Items.Add(a);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Számot adj meg!","Hiba",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                tbAoldal.Focus();
             }
         }
 
