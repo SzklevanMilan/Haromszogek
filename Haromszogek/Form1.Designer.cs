@@ -140,11 +140,12 @@
             // 
             // lbHarmszogLista
             // 
+            this.lbHarmszogLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbHarmszogLista.FormattingEnabled = true;
-            this.lbHarmszogLista.ItemHeight = 24;
-            this.lbHarmszogLista.Location = new System.Drawing.Point(425, 49);
+            this.lbHarmszogLista.ItemHeight = 18;
+            this.lbHarmszogLista.Location = new System.Drawing.Point(409, 49);
             this.lbHarmszogLista.Name = "lbHarmszogLista";
-            this.lbHarmszogLista.Size = new System.Drawing.Size(216, 268);
+            this.lbHarmszogLista.Size = new System.Drawing.Size(232, 256);
             this.lbHarmszogLista.TabIndex = 10;
             // 
             // btnTorol
@@ -169,7 +170,6 @@
             // 
             // ofdMegnyitas
             // 
-            this.ofdMegnyitas.FileName = "openFileDialog1";
             this.ofdMegnyitas.Filter = "Text files|*.txt";
             this.ofdMegnyitas.InitialDirectory = "C:\\Users\\d16szklevanm\\source\\repos\\Haromszogek\\Haromszogek\\bin\\Debug";
             // 
